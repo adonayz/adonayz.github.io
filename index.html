@@ -1,0 +1,71 @@
+<html>
+<head>
+
+</head>
+
+<body>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+
+    <script>
+        console.log(d3); // test if d3 is loaded
+
+        var svg = d3.select('body').append('svg')
+            .attr('width', '800')
+            .attr('height', '800')
+            .style('margin', '50px')
+            .style('border', '5px solid #d3d3d3');
+
+        // Circle
+        svg.append('circle')
+            .attr('cx', 80)
+            .attr('cy', 80)
+            .attr('r', 60)
+            .style('fill', 'black');
+
+        // Rectangle
+        svg.append('rect')
+            .attr('x', 180)
+            .attr('y', 40)
+            .attr('width', 180)
+            .attr('height', 100)
+            .style('fill', 'orange');
+
+        // Ellipse
+        svg.append('ellipse')
+            .attr('cx', '500')
+            .attr('cy', '90')
+            .attr('rx', '40')
+            .attr('ry', '60')
+            .style('fill', 'violet');
+
+        // Line
+        svg.append('line')
+            .attr('x1', 630)
+            .attr('y1', 90)
+            .attr('x2', 760)
+            .attr('y2', 60)
+            .style('stroke', 'red')
+            .style('stroke-width', 10);
+
+        // Polyline
+        svg.append('polyline')
+            .attr('points', '50,280 120,290 120,320 150,320')
+            .style('stroke', 'blue')
+            .style('stroke-width', 10)
+            .style('fill', 'white');
+
+        // Polygone
+        svg.append('polygon')
+            .attr('points', '360,250 340,340 230,330 220,280')
+            .style('fill', 'yellow');
+
+        // Path
+        svg.append('path')
+            .attr('d', 'M470,290 L510,280 Q540,350 570,280 L600,290 Z')
+            .style('stroke', 'purple')
+            .style('stroke-width', '7')
+            .style('fill', 'white');
+    </script>
+
+</body>
+</html>
